@@ -16,7 +16,7 @@ public class Tier2Queue {
     public int waited(Process p, int now) { return now - enteredAt.get(p); }
 
     public int effectivePriority(Process p, int now) {
-        return p.getPriority() - waited(p, now) / 4;  
+        return p.getPriority() - waited(p, now) / 4;
     }
 
     public Process pickNext(int now) {
